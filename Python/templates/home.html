@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
 
     <title>Sharif's Notebook</title>
 </head>
@@ -21,7 +21,7 @@
             <div class="row p-4">
                 <div class="center-block p-4">
 
-                    <a href="#" style="text-decoration:none;">
+                    <a href="{% url 'home' %}" style="text-decoration:none;">
                         <h1 style="color:white;">
                             Sharif's Notebook</h1>
                     </a> </h1>
@@ -29,21 +29,63 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="pl-4">
-                    <a href="#" class="btn btn-dark p-2">Home</a>
-                    <a href="#" class="btn btn-dark ml-2 p-2">About Us</a>
-                    <a href="#" class="btn btn-dark ml-2 p-2">Contact Us</a>
-
-                    <a href="#" class="btn btn-dark ml-2 p-2">Log In</a>
-                    <a href="#" class="btn btn-dark ml-2 p-2">Sign Up</a>
-
-                </div>
-            </div>
 
         </div>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand btn btn-dark" href="#">Home</a>
+            <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link btn btn-dark my-2 mx-2 my-lg-0" href="#">About Me <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link btn btn-dark my-2 mx-2 my-lg-0" href="#">Contact Me</a>
+                    </li>
+
+                    <form class="form-inline my-2 mx-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search Topics" aria-label="Search">
+                        <button class="btn btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+
+
+                </ul>
+
+                {%if user.is_authenticated %}
+                <ul class="navbar-nav mr">
+
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-success nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}}</button>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Change_password</a>
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Log out</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                {%else%}
+                <form class="form-inline my-2 my-lg-0">
+                    <a href="#" class="btn btn-dark p-2">Log in</a>
+                    <a href="#" class="btn btn-dark p-2 ml-2">Sign up</a>
+                </form>
+                {%endif%}
+
+
+            </div>
+        </nav>
     </div>
     <!--end 1st Container-->
+
+
 
 
     <div class="container-fluid pb-4" style="background-color:rgba(238, 238, 238, 0.993);">
@@ -52,7 +94,7 @@
                 <div class="col pt-4">
                     <div class="card">
                         <div class="card-body">
-                            <a href="{% url 'PythonHome'%}" style="text-decoration:none;">
+                            <a href="{% url 'Python/PythonHome'%}" style="text-decoration:none;">
                                 <div class="demo p-4">
                                     <div class="center-block">
                                         <h1>Python</h1>
@@ -61,8 +103,8 @@
                             </a>
                             <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
                             <div class="card-footer btn-info">
-                                <a href="#" data-toggle="collapse" data-target="#Python" >
-                                        <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                <a href="#" data-toggle="collapse" data-target="#Python">
+                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
                                 </a>
                                 <div id="Python" class="collapse">
                                     <div class="card">
@@ -74,7 +116,7 @@
                                             <li class="list-group-item"><a href="">Post5</a></li>
                                             <li class="list-group-item"><a href="">Post6</a></li>
                                         </ul>
-                                    </div>                             
+                                    </div>
                                 </div>
                             </div>
 
@@ -97,22 +139,22 @@
                             </a>
                             <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
                             <div class="card-footer btn-info">
-                                    <a href="#" data-toggle="collapse" data-target="#Programming" >
-                                            <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
-                                    </a>
-                                    <div id="Programming" class="collapse">
-                                        <div class="card">
-                                            <ul class="list-group list-group-flush justify-content-center">
-                                                <li class="list-group-item"><a href="">Post1</a></li>
-                                                <li class="list-group-item"><a href="">Post3</a></li>
-                                                <li class="list-group-item"><a href="">Post3</a></li>
-                                                <li class="list-group-item"><a href="">Post4</a></li>
-                                                <li class="list-group-item"><a href="">Post5</a></li>
-                                                <li class="list-group-item"><a href="">Post6</a></li>
-                                            </ul>
-                                        </div>                             
+                                <a href="#" data-toggle="collapse" data-target="#Programming">
+                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                </a>
+                                <div id="Programming" class="collapse">
+                                    <div class="card">
+                                        <ul class="list-group list-group-flush justify-content-center">
+                                            <li class="list-group-item"><a href="">Post1</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post4</a></li>
+                                            <li class="list-group-item"><a href="">Post5</a></li>
+                                            <li class="list-group-item"><a href="">Post6</a></li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
@@ -134,22 +176,22 @@
                             </a>
                             <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
                             <div class="card-footer btn-info">
-                                    <a href="#" data-toggle="collapse" data-target="#Django" >
-                                            <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
-                                    </a>
-                                    <div id="Django" class="collapse">
-                                        <div class="card">
-                                            <ul class="list-group list-group-flush justify-content-center">
-                                                <li class="list-group-item"><a href="">Post1</a></li>
-                                                <li class="list-group-item"><a href="">Post3</a></li>
-                                                <li class="list-group-item"><a href="">Post3</a></li>
-                                                <li class="list-group-item"><a href="">Post4</a></li>
-                                                <li class="list-group-item"><a href="">Post5</a></li>
-                                                <li class="list-group-item"><a href="">Post6</a></li>
-                                            </ul>
-                                        </div>                             
+                                <a href="#" data-toggle="collapse" data-target="#Django">
+                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                </a>
+                                <div id="Django" class="collapse">
+                                    <div class="card">
+                                        <ul class="list-group list-group-flush justify-content-center">
+                                            <li class="list-group-item"><a href="">Post1</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post4</a></li>
+                                            <li class="list-group-item"><a href="">Post5</a></li>
+                                            <li class="list-group-item"><a href="">Post6</a></li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
@@ -169,22 +211,22 @@
                             </a>
                             <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
                             <div class="card-footer btn-info">
-                                    <a href="#" data-toggle="collapse" data-target="#Scrapping" >
-                                            <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
-                                    </a>
-                                    <div id="Scrapping" class="collapse">
-                                        <div class="card">
-                                            <ul class="list-group list-group-flush justify-content-center">
-                                                <li class="list-group-item"><a href="">Post1</a></li>
-                                                <li class="list-group-item"><a href="">Post3</a></li>
-                                                <li class="list-group-item"><a href="">Post3</a></li>
-                                                <li class="list-group-item"><a href="">Post4</a></li>
-                                                <li class="list-group-item"><a href="">Post5</a></li>
-                                                <li class="list-group-item"><a href="">Post6</a></li>
-                                            </ul>
-                                        </div>                             
+                                <a href="#" data-toggle="collapse" data-target="#Scrapping">
+                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                </a>
+                                <div id="Scrapping" class="collapse">
+                                    <div class="card">
+                                        <ul class="list-group list-group-flush justify-content-center">
+                                            <li class="list-group-item"><a href="">Post1</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post4</a></li>
+                                            <li class="list-group-item"><a href="">Post5</a></li>
+                                            <li class="list-group-item"><a href="">Post6</a></li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
@@ -207,22 +249,22 @@
                             </a>
                             <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
                             <div class="card-footer btn-info">
-                                    <a href="#" data-toggle="collapse" data-target="#Web" >
-                                            <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
-                                    </a>
-                                    <div id="Web" class="collapse">
-                                        <div class="card">
-                                            <ul class="list-group list-group-flush justify-content-center">
-                                                <li class="list-group-item"><a href="">Post1</a></li>
-                                                <li class="list-group-item"><a href="">Post3</a></li>
-                                                <li class="list-group-item"><a href="">Post3</a></li>
-                                                <li class="list-group-item"><a href="">Post4</a></li>
-                                                <li class="list-group-item"><a href="">Post5</a></li>
-                                                <li class="list-group-item"><a href="">Post6</a></li>
-                                            </ul>
-                                        </div>                             
+                                <a href="#" data-toggle="collapse" data-target="#Web">
+                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                </a>
+                                <div id="Web" class="collapse">
+                                    <div class="card">
+                                        <ul class="list-group list-group-flush justify-content-center">
+                                            <li class="list-group-item"><a href="">Post1</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post4</a></li>
+                                            <li class="list-group-item"><a href="">Post5</a></li>
+                                            <li class="list-group-item"><a href="">Post6</a></li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
@@ -241,22 +283,22 @@
                             </a>
                             <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
                             <div class="card-footer btn-info">
-                                    <a href="#" data-toggle="collapse" data-target="#Others" >
-                                            <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
-                                    </a>
-                                    <div id="Others" class="collapse">
-                                        <div class="card">
-                                            <ul class="list-group list-group-flush justify-content-center">
-                                                <li class="list-group-item"><a href="">Post1</a></li>
-                                                <li class="list-group-item"><a href="">Post3</a></li>
-                                                <li class="list-group-item"><a href="">Post3</a></li>
-                                                <li class="list-group-item"><a href="">Post4</a></li>
-                                                <li class="list-group-item"><a href="">Post5</a></li>
-                                                <li class="list-group-item"><a href="">Post6</a></li>
-                                            </ul>
-                                        </div>                             
+                                <a href="#" data-toggle="collapse" data-target="#Others">
+                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                </a>
+                                <div id="Others" class="collapse">
+                                    <div class="card">
+                                        <ul class="list-group list-group-flush justify-content-center">
+                                            <li class="list-group-item"><a href="">Post1</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post4</a></li>
+                                            <li class="list-group-item"><a href="">Post5</a></li>
+                                            <li class="list-group-item"><a href="">Post6</a></li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
@@ -269,7 +311,10 @@
     </div>
     <!--end of main Container-->
 
-    <div class="container-fluid p-4" style="background-color:rgba(14, 15, 15, 0.932);">
+
+
+
+    <div class="container-fluid p-4" style="background-color:rgb(43, 134, 146);">
         <div class="container">
             <div class="row">
                 <div class="center-block p-4">

@@ -1,0 +1,115 @@
+{% extends 'index.html'%}
+{% block content%}
+<h1 style="text-align: center;"><b> বিল্ট ইন ফাংশন</b></h1>
+
+
+
+<p>এই পর্বে আমরা Python এর কিছু বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে
+    ততই জনপ্রিয় হচ্ছে এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা
+    এবং এর সুবিশাল লাইব্রেরী |
+    <br> এবার একটু সামনের দিকে এগুনো যাক ..........
+</p>
+
+<div class="post pb-1 pt-2">
+    <h3><b> abs(argument) </b></h3>
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        এই ফাংশন একটা আর্গুমেন্ট নেয় , সেটা হতে পারে ইন্টিজার,ফ্লোট বা কোন জটিল সংখ্য এবং তার Absolute ভেলু এবং
+        জটিল সংখ্যার ক্ষেত্রে তার Magnitude রিটার্ন করে |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+
+            integer = -20
+            <br>print('Absolute value of -20 is:', abs(integer))
+
+            <br><br>floating = -30.33
+            <br>print('Absolute value of -30.33 is:', abs(floating))
+
+            <br><br>complex = (3 - 4j)
+            <br>print('Magnitude of 3 - 4j is:', abs(complex))
+            <br><br>Output:
+            <br>Absolute value of -20 is: 20
+            <br>Absolute value of -30.33 is: 30.33
+            <br>Magnitude of 3 - 4j is: 5.0
+
+        </p>
+    </div>
+</div>
+
+<div class="post pb-1 pt-2">
+    <h3><b> bin(argument): </b></h3>
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        এই ফাংশনের মাধ্যমে কোন ইন্টিজার নাম্বার কে বাইনারি স্ট্রিং এ কনভার্ট করা হয় | উল্লেখ্য সামনে '0b' প্রিফিক্স যোগ
+        করে
+        |
+        এই প্রিফিক্সটা বাদ দেয়ার জন্য <strong>Format()</strong> মেথড ব্যবহার করতে হয় |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+
+            >>>bin(3)
+            <br>'0b11'
+            <br>>>>bin(-10)
+            <br>'-0b1010'
+            <br><br>>>>format(14, '#b'), format(14, 'b')
+            <br>('0b1110', '1110')
+
+        </p>
+    </div>
+
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        এএকইভাবে <strong>hex()</strong>ও <strong>oct()</strong> মেথডও কাজ করে |
+        <strong>hex()</strong> সামনে '0x' প্রিফিক্স যোগ করে এবং
+        <strong>oct()</strong> সামনে '0o' প্রিফিক্স যোগ করে |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+
+            >>>hex(255)
+            <br>'0xff'
+            <br>>>>oct(8)
+            <br>'0o10'
+            <br><br>>>>format(255, '#x'), format(255, 'x'), format(255, 'X')
+            <br>('0xff', 'ff', 'FF')
+
+            <br><br>>>>format(10, '#o'), format(10, 'o')
+            <br>('0o12', '12')
+
+        </p>
+    </div>
+</div>
+
+
+<div class="post pb-1 pt-2">
+    <h3><b> format(): </b></h3>
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        এই মেথডের মাধ্যমে কোন একটা ভেলুর ফরমেট স্পেছিফায়ার এর সাহায্যে ফরমেটেড রিপ্রেসেন্টেশন করা হয় |
+        এক কথায় বলা যায় কোন একটা ভেলুকে সাজানো হয় , সেটা ডেভেলপার যেভাবে চায় |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+
+            >>>bin(3)
+            <br>'0b11'
+            <br>>>>bin(-10)
+            <br>'-0b1010'
+
+            <br><br>>>>format(14, '#b'), format(14, 'b')
+            <br>('0b1110', '1110')
+
+        </p>
+    </div>
+</div>
+
+
+
+<hr>
+<div class="clearfix">
+    <button type="button" class="btn bg-dark float-left"><a class="p-4" href="#" style="color:white;">
+            Previous </a></button>
+    <button type="button" class="btn bg-dark float-right">
+        <a class="p-4" href="{% url 'Python/built_in_function2'%}" style="color:white;">Next</a>
+    </button>
+</div>
+
+{% endblock %}

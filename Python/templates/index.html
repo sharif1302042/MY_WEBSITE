@@ -1,4 +1,6 @@
 {% extends 'PythonHome.html'%}
+{% load staticfiles%}
+
 {% block content%}
 
 
@@ -10,23 +12,24 @@
 		হল এর সহজবোদ্ধতা এবং এর সুবিশাল লাইব্রেরী |
 		এবার একটু সামনের দিকে এগুনো যাক ..........
 	</p>
-	<button type="button" class="btn btn-outline-info btn-lg btn-block"> 
-		<a href="#">Continue Reading.....</a> </button><br>
+
+	<a href="{%url 'Python/built_in_function'%}"><button type="button" class="btn btn-outline-info btn-lg btn-block">
+		 Continue Reading.....</button><br></a>
 	<hr>
 </div>
 
 <div class="post">
-		<h2><b>বিল্ট ইন ফাংশন পার্ট ২</b></h2><br>
-		<p class="pb-4">
-			এই পর্বে আমরা Python এর কিছু বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে ততই জনপ্রিয় হচ্ছে
-			এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা এবং এর সুবিশাল লাইব্রেরী |
-			এবার একটু সামনের দিকে এগুনো যাক ..........
-		</p>
-		<button type="button" class="btn btn-outline-info btn-lg btn-block">
-			 <a href="#">Continue Reading.....</a> </button><br>
-		<hr>
-	
-	</div>
+	<h2><b>বিল্ট ইন ফাংশন পার্ট ২</b></h2><br>
+	<p class="pb-4">
+		এই পর্বে আমরা Python এর কিছু বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে ততই জনপ্রিয় হচ্ছে
+		এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা এবং এর সুবিশাল লাইব্রেরী |
+		এবার একটু সামনের দিকে এগুনো যাক ..........
+	</p>
+	<a href="{%url 'Python/built_in_function2'%}"><button type="button" class="btn btn-outline-info btn-lg btn-block"> 
+		Continue Reading.....</button><br></a>
+	<hr>
+
+</div>
 
 <div class="post">
 	<h2><b>লিস্ট অপারেশনস </b></h2><br>
@@ -35,9 +38,8 @@
 		অ্যারে তাহাই পাইথনে লিস্ট | তবে অ্যারের চাইতে এর কিছু গুরুত্বপূর্ণ ফিচার আছে | আজকে আমাদের আলোচনার বিষয়বস্তু লিস্ট
 		ডাটা টাইপ |
 	</p>
-	<button type="button" class="btn btn-outline-info btn-lg btn-block"> 
-		<a href="#" style="list-style: none">Continue
-			Reading.....</a> </button><br>
+	<a href="{%url 'Python/list_operation'%}"><button type="button" class="btn btn-outline-info btn-lg btn-block"> 
+			Continue Reading.....</button><br></a>
 	<hr>
 </div>
 
@@ -50,35 +52,34 @@
 		ছোট হাতের অক্ষর আছে তা বের করার জন্য এই দুইটা মেথড ব্যবহার করা হয় |
 		যদি বড় হাতের হয় তাহলে True রিটার্ন করে অন্যথায় False রিটার্ন করে |
 	</p>
-	<button type="button" class="btn btn-outline-info btn-lg btn-block">
-		 <a href="#">Continue
-			Reading.....</a> </button><br>
+	<a href="{%url 'Python/string_operation'%}"><button type="button" class="btn btn-outline-info btn-lg btn-block"> 
+			Continue Reading.....</button><br></a>
 	<hr>
 </div>
 
 
 <div class="post">
-		<h2><b>Dictionary অপারেশনস</b></h2><br>
-		<p class="pb-4">
-			এই পর্বে আমরা Python এর কিছু বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে ততই জনপ্রিয় হচ্ছে
-			এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা এবং এর সুবিশাল লাইব্রেরী |
-			এবার একটু সামনের দিকে এগুনো যাক ..........
-		</p>
-		<button type="button" class="btn btn-outline-info btn-lg btn-block"> 
-			<a href="#">Continue Reading.....</a> </button><br>
-		<hr>
-	
-	</div>
+	<h2><b>Dictionary অপারেশনস</b></h2><br>
+	<p class="pb-4">
+		এই পর্বে আমরা Python এর কিছু বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে ততই জনপ্রিয় হচ্ছে
+		এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা এবং এর সুবিশাল লাইব্রেরী |
+		এবার একটু সামনের দিকে এগুনো যাক ..........
+	</p>
+	<a href="{% url  'Python/dictionary_operation' %}"><button type="button" class="btn btn-outline-info btn-lg btn-block"> 
+			Continue Reading.....</button><br></a>
+	<hr>
+
+</div>
 
 
-<h2><b>লিস্ট কম্প্রিহেনশনঃ   </b></h2><br>
+<h2><b>লিস্ট কম্প্রিহেনশনঃ </b></h2><br>
 <p class="pb-4">
-	লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা 
-	লিস্ট কম্প্রিহেনশন এর মাধ্যমে  কমিয়ে দুই বা এক লাইন এ করতে পারবেন |
-	তবে প্রথম দিকে বুঝতে একটু সময় লাগে | 
+	লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা
+	লিস্ট কম্প্রিহেনশন এর মাধ্যমে কমিয়ে দুই বা এক লাইন এ করতে পারবেন |
+	তবে প্রথম দিকে বুঝতে একটু সময় লাগে |
 </p>
-<button type="button" class="btn btn-outline-info btn-lg btn-block">
-	<a href="#">Continue Reading.....</a></button>
+<a href="{%url 'Python/list_comprehension'%}"><button type="button" class="btn btn-outline-info btn-lg btn-block"> 
+		Continue Reading.....</button><br></a>
 
 
 

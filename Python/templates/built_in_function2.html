@@ -1,0 +1,142 @@
+{% extends 'index.html'%}
+{% block content%}
+<h1 style="text-align: center;"><b> বিল্ট ইন ফাংশন পার্ট ২ </b></h1>
+
+<p>এই পর্বে আমরা Python এর কিছু বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে
+    ততই জনপ্রিয় হচ্ছে এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা
+    এবং এর সুবিশাল লাইব্রেরী |
+    <br> এবার একটু সামনের দিকে এগুনো যাক ..........
+</p>
+
+<div class="post pt-2">
+    <h3><b> map(): </b></h3>
+
+    <p class="pb-2" style="font-size:18px;">
+        মূলত এই মেথডের সিনটেক্সট টা এমন <b> map(function,iterable1, iterable2,....)</b>
+
+        <br> মূলত এই মেথডে একটা ফাংশনের ভিতর দিয়ে এক বা একাধিক ইটারেবল পাস করা হয় এবং
+        এই ইটারেবল এর উপর ফাংশনটি apply করা হয় |
+        কিছু example দেখলে বিষয় গুলো আরো পরিষ্কার হবে ,
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+            def squre(n):
+            <br> >>>return n*n
+
+            <br><br>s=[1,2,3,4,5]
+            <br>print(list(map(squre,s)))
+            <br>Output : [1, 4, 9, 16, 25, 36]
+
+            <br><br>num1 = [4, 5, 6]
+            <br>num2 = [5, 6, 7]
+            <br>result = map(lambda n1, n2: n1+n2, num1, num2)
+            <br>print(list(result))
+            <br>Output : [9, 11, 13]
+
+        </p>
+    </div>
+</div>
+
+
+<div class="post pt-2">
+    <h3><b> filter(): </b></h3>
+    <p class="pb-2" style="font-size:18px;">
+        নাম থেকেই বোঝা যাচ্ছে এর কাজ ফিল্টারিং করা | এর সিনটেক্স এবং কাজের ধরন অনেকটাই map() মেথডের মতই |
+        কিছু কন্ডিশন এর উপর ভিত্তি করে ইটারেবল গুলোর উপর ফিল্টারিং এপ্লাই করা |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+            num=[1,-2,3,4,5,-10]
+
+            <br>def positive(n):
+            <br>>>>if n>=0:
+            <br>>>>return n
+            <br><br> print(list(filter(positive,num)))
+            <br>Output: [1, 3, 4, 5]
+        </p>
+    </div>
+
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        নিচের example টি একটি নাম্বার জোড় কিনা তা চেক করবে |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+            def even(n):
+            <br>>>>if n%2==0:
+            <br>>>>return n
+
+            <br><br> print(list(filter(even,num)))
+            <br>Output: [-2,4,10]
+        </p>
+    </div>
+</div>
+
+<div class="post pt-2">
+    <h3><b> reversed(): </b></h3>
+    <p class="pb-2" style="font-size:18px;">
+        এই মেথডের মাধ্যমে কোন একটা লিস্ট এর আইটেম গুলোকে রিভারস করা যায় |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+            lst=[1,2,3,10,5,6]
+            <br>print(list(reversed(lst)))
+            <br><br>Output: [6, 5, 10, 3, 2, 1]
+        </p>
+    </div>
+
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        একই ভাবে একটা স্ট্রিং এর আইটেম গুলোকে রিভারস করতে পারি |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+            s = 'Python'
+            <br>print(list(reversed(s)))
+            <br><br>Output: ['n', 'o', 'h', 't', 'y', 'P']
+        </p>
+    </div>
+</div>
+
+
+<div class="post pt-2">
+    <h3><b> sorted(): </b></h3>
+    <p class="pb-2" style="font-size:18px;">
+        এই মেথডের মাধ্যমে কোন একটা লিস্ট এর আইটেম গুলোকে sort করা যায় সেটা ,
+        ছোট থেকে বড় বা বড় থেকে ছোট যেকোন
+        ভাবে হতে পারে | ছোট থেকে বড় ভাবে সাজানোর জন্য নিচের মত করে কোড লিখা যায় |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+            lst=[1,2,3,10,5,6]
+            <br>print(sorted(lst))
+            <br><br>Output: [1, 2, 3, 5, 6, 10]
+        </p>
+    </div>
+
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        একই ভাবে বড় থেকে ছোট ভাবে সাজানোর জন্য নিচের মত করে কোড লিখা যায় |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+            lst=[1,2,3,10,5,6]
+            <br>print(sorted(lst,reverse=True))
+            <br><br>Output: [10, 6, 5, 3, 2, 1]
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+<hr>
+<div class="clearfix">
+    <button type="button" class="btn bg-dark float-left"><a class="p-4" href="{% url 'Python/built_in_function'%}"
+            style="color:white;">Previous </a></button>
+    <button type="button" class="btn bg-dark float-right">
+        <a class="p-4" href="{% url 'Python/list_operation'%}" style="color:white;">Next</a>
+    </button>
+</div>
+
+
+{% endblock %}

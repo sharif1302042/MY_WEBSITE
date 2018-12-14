@@ -1,0 +1,58 @@
+{% extends 'index.html'%}
+{% block content%}
+<h1><b>লিস্ট কম্প্রিহেনশন </b></h1><br>
+<div class="post pb-1">
+    <h3><b> Two Dimensional লিস্টঃ</b></h3>
+    <p class="pb-4" style="font-size:18px;">
+        লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা লিস্ট
+        কম্প্রিহেনশন এর মাধ্যমে কমিয়ে দুই বা এক লাইন এ করতে পারবেন | তবে প্রথম দিকে বুঝতে একটু সময় লাগে |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+
+            list=[[x for x in range(4)] for y in range(4)] <br>
+            print(list) <br>
+            [output:] = [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]] <br>
+        </p>
+
+    </div>
+</div>
+
+<div class="post pb-1 pt-2">
+    <h3><b>ডিকশনারি কম্প্রিহেনশন </b></h3>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+
+            squares = {x: x*x for x in range(6)}
+            <br>print(squares)
+            <br> [output]: Output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+        </p>
+    </div>
+
+    <p class="pb-4" style="font-size:18px;">
+        This code is equivalent to
+    </p>
+
+
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+            squares = {}
+            <br>for x in range(6):
+            <br>squares[x] = x*x
+            <br> [output]: Output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+        </p>
+    </div>
+
+</div>
+<hr>
+<div class="clearfix">
+    <button type="button" class="btn bg-dark float-left"><a class="p-4" href="{%url 'Python/dictionary_operation'%}" 
+        style="color:white;">Previous</a></button>
+    <button type="button" class="btn bg-dark float-right">
+        <a class="p-4" href="#" style="color:white;">Next</a>
+    </button>
+</div>
+
+
+{% endblock %}
