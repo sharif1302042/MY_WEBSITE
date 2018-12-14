@@ -1,0 +1,300 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+
+    <title>Sharif's Notebook</title>
+</head>
+
+<body>
+    <div class="container-fluid p-4" style="background-color:rgb(43, 134, 146);">
+        <div class="container">
+            <div class="row p-4">
+                <div class="center-block p-4">
+
+                    <a href="#" style="text-decoration:none;">
+                        <h1 style="color:white;">
+                            Sharif's Notebook</h1>
+                    </a> </h1>
+                    <h6>"Chase Your Dream, Coz Dreams Come True."-SRT.</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="pl-4">
+                    <a href="#" class="btn btn-dark p-2">Home</a>
+                    <a href="#" class="btn btn-dark ml-2 p-2">About Us</a>
+                    <a href="#" class="btn btn-dark ml-2 p-2">Contact Us</a>
+
+                    <a href="#" class="btn btn-dark ml-2 p-2">Log In</a>
+                    <a href="#" class="btn btn-dark ml-2 p-2">Sign Up</a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--end 1st Container-->
+
+
+    <div class="container-fluid pb-4" style="background-color:rgba(238, 238, 238, 0.993);">
+        <div class="container">
+            <div class="row ">
+                <div class="col pt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="{% url 'PythonHome'%}" style="text-decoration:none;">
+                                <div class="demo p-4">
+                                    <div class="center-block">
+                                        <h1>Python</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
+                            <div class="card-footer btn-info">
+                                <a href="#" data-toggle="collapse" data-target="#Python" >
+                                        <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                </a>
+                                <div id="Python" class="collapse">
+                                    <div class="card">
+                                        <ul class="list-group list-group-flush justify-content-center">
+                                            <li class="list-group-item"><a href="">Post1</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post3</a></li>
+                                            <li class="list-group-item"><a href="">Post4</a></li>
+                                            <li class="list-group-item"><a href="">Post5</a></li>
+                                            <li class="list-group-item"><a href="">Post6</a></li>
+                                        </ul>
+                                    </div>                             
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col pt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:none;">
+                                <div class="demo p-4">
+                                    <div class="center-block">
+                                        <h1>Programming</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
+                            <div class="card-footer btn-info">
+                                    <a href="#" data-toggle="collapse" data-target="#Programming" >
+                                            <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                    </a>
+                                    <div id="Programming" class="collapse">
+                                        <div class="card">
+                                            <ul class="list-group list-group-flush justify-content-center">
+                                                <li class="list-group-item"><a href="">Post1</a></li>
+                                                <li class="list-group-item"><a href="">Post3</a></li>
+                                                <li class="list-group-item"><a href="">Post3</a></li>
+                                                <li class="list-group-item"><a href="">Post4</a></li>
+                                                <li class="list-group-item"><a href="">Post5</a></li>
+                                                <li class="list-group-item"><a href="">Post6</a></li>
+                                            </ul>
+                                        </div>                             
+                                    </div>
+                                </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end 1st row-->
+            <div class="row">
+                <div class="col pt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:none;">
+                                <div class="demo p-4">
+                                    <div class="center-block">
+                                        <h1>Django</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
+                            <div class="card-footer btn-info">
+                                    <a href="#" data-toggle="collapse" data-target="#Django" >
+                                            <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                    </a>
+                                    <div id="Django" class="collapse">
+                                        <div class="card">
+                                            <ul class="list-group list-group-flush justify-content-center">
+                                                <li class="list-group-item"><a href="">Post1</a></li>
+                                                <li class="list-group-item"><a href="">Post3</a></li>
+                                                <li class="list-group-item"><a href="">Post3</a></li>
+                                                <li class="list-group-item"><a href="">Post4</a></li>
+                                                <li class="list-group-item"><a href="">Post5</a></li>
+                                                <li class="list-group-item"><a href="">Post6</a></li>
+                                            </ul>
+                                        </div>                             
+                                    </div>
+                                </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col pt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:none;">
+                                <div class="demo p-4">
+                                    <div class="center-block">
+                                        <h1>Web Scrapping</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
+                            <div class="card-footer btn-info">
+                                    <a href="#" data-toggle="collapse" data-target="#Scrapping" >
+                                            <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                    </a>
+                                    <div id="Scrapping" class="collapse">
+                                        <div class="card">
+                                            <ul class="list-group list-group-flush justify-content-center">
+                                                <li class="list-group-item"><a href="">Post1</a></li>
+                                                <li class="list-group-item"><a href="">Post3</a></li>
+                                                <li class="list-group-item"><a href="">Post3</a></li>
+                                                <li class="list-group-item"><a href="">Post4</a></li>
+                                                <li class="list-group-item"><a href="">Post5</a></li>
+                                                <li class="list-group-item"><a href="">Post6</a></li>
+                                            </ul>
+                                        </div>                             
+                                    </div>
+                                </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end 2nd row-->
+
+            <div class="row">
+                <div class="col pt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:none;">
+                                <div class="demo p-4">
+                                    <div class="center-block">
+                                        <h1>Web Scrapping</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
+                            <div class="card-footer btn-info">
+                                    <a href="#" data-toggle="collapse" data-target="#Web" >
+                                            <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                    </a>
+                                    <div id="Web" class="collapse">
+                                        <div class="card">
+                                            <ul class="list-group list-group-flush justify-content-center">
+                                                <li class="list-group-item"><a href="">Post1</a></li>
+                                                <li class="list-group-item"><a href="">Post3</a></li>
+                                                <li class="list-group-item"><a href="">Post3</a></li>
+                                                <li class="list-group-item"><a href="">Post4</a></li>
+                                                <li class="list-group-item"><a href="">Post5</a></li>
+                                                <li class="list-group-item"><a href="">Post6</a></li>
+                                            </ul>
+                                        </div>                             
+                                    </div>
+                                </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col pt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:none;">
+                                <div class="demo p-4">
+                                    <div class="center-block">
+                                        <h1>Others</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
+                            <div class="card-footer btn-info">
+                                    <a href="#" data-toggle="collapse" data-target="#Others" >
+                                            <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                    </a>
+                                    <div id="Others" class="collapse">
+                                        <div class="card">
+                                            <ul class="list-group list-group-flush justify-content-center">
+                                                <li class="list-group-item"><a href="">Post1</a></li>
+                                                <li class="list-group-item"><a href="">Post3</a></li>
+                                                <li class="list-group-item"><a href="">Post3</a></li>
+                                                <li class="list-group-item"><a href="">Post4</a></li>
+                                                <li class="list-group-item"><a href="">Post5</a></li>
+                                                <li class="list-group-item"><a href="">Post6</a></li>
+                                            </ul>
+                                        </div>                             
+                                    </div>
+                                </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--end of main Container-->
+
+    <div class="container-fluid p-4" style="background-color:rgba(14, 15, 15, 0.932);">
+        <div class="container">
+            <div class="row">
+                <div class="center-block p-4">
+                    <h6>All Right Reserve to....</h6>
+                    <h2>Sharif's Notebook</h2>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
