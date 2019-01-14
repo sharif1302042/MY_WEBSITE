@@ -19,7 +19,7 @@
     <div class="container-fluid p-4" style="background-color:rgb(43, 134, 146);">
         <div class="container">
             <div class="row p-4">
-                <div class="center-block p-4">
+                <div class="center-block">
 
                     <a href="{% url 'home' %}" style="text-decoration:none;">
                         <h1 style="color:white;">
@@ -89,7 +89,7 @@
 
 
     <div class="container-fluid pb-4" style="background-color:rgba(238, 238, 238, 0.993);">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row ">
                 <div class="col pt-4">
                     <div class="card">
@@ -101,28 +101,33 @@
                                     </div>
                                 </div>
                             </a>
-                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
-                            <div class="card-footer btn-info">
+                            <p class="pt-4">
+                                আমরা এই পর্বে পাইথন এর একবারে ব্যাসিক থেকে কিছু এডভান্স বিষয় নিয়ে আলোচনা করবো |
+                                আশা করি এই সিরিজ থেকে আপনারা পাইথনের ব্যাসিক ও এডভান্স বিষয়াদি খুব ভালভাবেই জানতে
+                                পারবেন |
+                            </p>
+                            <div class="card p-4 btn-info ">
                                 <a href="#" data-toggle="collapse" data-target="#Python">
-                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                    <h1><b> All Posts</b></h1>
                                 </a>
                                 <div id="Python" class="collapse">
                                     <div class="card">
                                         <ul class="list-group list-group-flush justify-content-center">
-                                            <li class="list-group-item"><a href="">Post1</a></li>
-                                            <li class="list-group-item"><a href="">Post3</a></li>
-                                            <li class="list-group-item"><a href="">Post3</a></li>
-                                            <li class="list-group-item"><a href="">Post4</a></li>
-                                            <li class="list-group-item"><a href="">Post5</a></li>
-                                            <li class="list-group-item"><a href="">Post6</a></li>
+                                            <li class="list-group-item"><a href="">বিল্ট ইন ফাংশন</a></li>
+                                            <li class="list-group-item"><a href="">বিল্ট ইন ফাংশন পার্ট ২</a></li>
+                                            <li class="list-group-item"><a href="">লিস্ট অপারেশনস</a></li>
+                                            <li class="list-group-item"><a href="">স্ট্রিং অপারেশনস</a></li>
+                                            <li class="list-group-item"><a href="">Dictionary অপারেশনস</a></li>
+                                            <li class="list-group-item"><a href="">লিস্ট কম্প্রিহেনশন</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <h4 class="text-muted">Last updated 3 mins ago</h4>
                             </div>
+                            <hr>
                         </div>
                     </div>
                 </div>
@@ -130,17 +135,20 @@
                 <div class="col pt-4">
                     <div class="card">
                         <div class="card-body">
-                            <a href="#" style="text-decoration:none;">
+                            <a href="{%url 'Programming/Home' %}" style="text-decoration:none;">
                                 <div class="demo p-4">
                                     <div class="center-block">
                                         <h1>Programming</h1>
                                     </div>
                                 </div>
                             </a>
-                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
-                            <div class="card-footer btn-info">
+                            <p class="pt-4">
+                                এই সিরিজ টি সাজানো হয়েছে বিভিন্ন ডাটা স্ট্রাকচার, অ্যালগোরিদম, গ্রাফ থিওরি ও নাম্বার থিওরি এর সমন্বয়ে |
+                                 আশা করা যায় এই সিরিজ থেকে প্রোগ্রামিং এর খুঁটিনাটি অনেক বিষয় জানতে পারবেন |  
+                            </p>
+                            <div class="card p-4 btn-info ">
                                 <a href="#" data-toggle="collapse" data-target="#Programming">
-                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                    <h1><b> All Posts</b></h1>
                                 </a>
                                 <div id="Programming" class="collapse">
                                     <div class="card">
@@ -158,6 +166,7 @@
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
+                            <hr>
                         </div>
                     </div>
                 </div>
@@ -167,22 +176,25 @@
                 <div class="col pt-4">
                     <div class="card">
                         <div class="card-body">
-                            <a href="#" style="text-decoration:none;">
+                            <a href="{% url 'Django/Home'%}" style="text-decoration:none;">
                                 <div class="demo p-4">
                                     <div class="center-block">
                                         <h1>Django</h1>
                                     </div>
                                 </div>
                             </a>
-                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
-                            <div class="card-footer btn-info">
+                            <p class="pt-4">
+                                Django পাইথনের একটি জনপ্রিয় ওয়েব ফ্রেমওয়ার্ক | 
+                                এই সিরিজ টিতে Django এর ব্যাসিক থেকে কিছু এডভান্স বিষয় নিয়ে আলোচনা করা হয়েছে | 
+                            </p>
+                            <div class="card p-4 btn-info ">
                                 <a href="#" data-toggle="collapse" data-target="#Django">
-                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                    <h1><b> All Posts</b></h1>
                                 </a>
                                 <div id="Django" class="collapse">
                                     <div class="card">
                                         <ul class="list-group list-group-flush justify-content-center">
-                                            <li class="list-group-item"><a href="">Post1</a></li>
+                                            <li class="list-group-item"><a href="">Django ORM and QuerySets</a></li>
                                             <li class="list-group-item"><a href="">Post3</a></li>
                                             <li class="list-group-item"><a href="">Post3</a></li>
                                             <li class="list-group-item"><a href="">Post4</a></li>
@@ -209,10 +221,14 @@
                                     </div>
                                 </div>
                             </a>
-                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
-                            <div class="card-footer btn-info">
+                            <p class="pt-4">
+                                আমরা এই পর্বে পাইথন এর একবারে ব্যাসিক থেকে কিছু এডভান্স বিষয় নিয়ে আলোচনা করবো |
+                                আশা করি এই সিরিজ থেকে আপনারা পাইথনের ব্যাসিক ও এডভান্স বিষয়াদি খুব ভালভাবেই জানতে
+                                পারবেন |
+                            </p>
+                            <div class="card p-4 btn-info ">
                                 <a href="#" data-toggle="collapse" data-target="#Scrapping">
-                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                    <h1><b> All Posts</b></h1>
                                 </a>
                                 <div id="Scrapping" class="collapse">
                                     <div class="card">
@@ -247,11 +263,15 @@
                                     </div>
                                 </div>
                             </a>
-                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
-                            <div class="card-footer btn-info">
-                                <a href="#" data-toggle="collapse" data-target="#Web">
-                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
-                                </a>
+                            <p class="pt-4">
+                                    আমরা এই পর্বে পাইথন এর একবারে ব্যাসিক থেকে কিছু এডভান্স বিষয় নিয়ে আলোচনা করবো |
+                                    আশা করি এই সিরিজ থেকে আপনারা পাইথনের ব্যাসিক ও এডভান্স বিষয়াদি খুব ভালভাবেই জানতে
+                                    পারবেন |
+                                </p>
+                                <div class="card p-4 btn-info ">
+                                    <a href="#" data-toggle="collapse" data-target="#Web">
+                                        <h1><b> All Posts</b></h1>
+                                    </a>
                                 <div id="Web" class="collapse">
                                     <div class="card">
                                         <ul class="list-group list-group-flush justify-content-center">
@@ -274,34 +294,37 @@
                 <div class="col pt-4">
                     <div class="card">
                         <div class="card-body">
-                            <a href="#" style="text-decoration:none;">
+                            <a href="{% url 'Others/Home'%}" style="text-decoration:none;">
                                 <div class="demo p-4">
                                     <div class="center-block">
                                         <h1>Others</h1>
                                     </div>
                                 </div>
                             </a>
-                            <h5 class="card-title pt-4">By Md. Shariful Islam</h5>
-                            <div class="card-footer btn-info">
+                            <p class="pt-4">
+                                এই সিরিজ টি কোন নিরদৃষ্ট বিষয়ের উপর নয় |
+                                এই সিরিজএ আমরা বিভিন্ন  বিষয়ের উপর আলোকপাত করবো |
+                            </p>
+                            <div class="card p-4 btn-info ">
                                 <a href="#" data-toggle="collapse" data-target="#Others">
-                                    <h3 style="color:rgb(82, 12, 12);"><b> 5 Posts</b></h3>
+                                    <h1><b> All Posts</b></h1>
                                 </a>
                                 <div id="Others" class="collapse">
                                     <div class="card">
                                         <ul class="list-group list-group-flush justify-content-center">
-                                            <li class="list-group-item"><a href="">Post1</a></li>
-                                            <li class="list-group-item"><a href="">Post3</a></li>
-                                            <li class="list-group-item"><a href="">Post3</a></li>
-                                            <li class="list-group-item"><a href="">Post4</a></li>
-                                            <li class="list-group-item"><a href="">Post5</a></li>
-                                            <li class="list-group-item"><a href="">Post6</a></li>
+                                            <li class="list-group-item"><a href="">Git And GitHub Part-1</a></li>
+                                            <li class="list-group-item"><a href="">Git And GitHub Part-2</a></li>
+                                            <li class="list-group-item"><a href="">উবুন্টুতে অভ্র ইন্সটল |</a></li>
+                                            <li class="list-group-item"><a href="">আপনার প্রজেক্ট ফ্রিতে হোস্ট করুন |</a></li>
+                                           
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <h5 class="text-muted">Last updated 3 mins ago</h5>
                             </div>
+                            <hr>
                         </div>
                     </div>
                 </div>

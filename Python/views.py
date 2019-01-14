@@ -23,3 +23,6 @@ def dictionary_operation(request):
 
 def list_comprehension(request):
 	return render(request,'list_comprehension.html')
+
+def itertools(request):
+	return render(request,'itertools.html')

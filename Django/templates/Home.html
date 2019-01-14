@@ -1,0 +1,75 @@
+{% extends 'DjangoHome.html'%}
+{% load staticfiles%}
+
+{% block content%}
+
+
+<div class="post">
+        <h2><b>Django ORM and QuerySets</b></h2>
+        <p class="pb-4" style="font-size:18px;">
+                এই পর্বে আমরা জানবো কিভাবে ডাটাবেস এর
+                সাথে কানেক্ট করে এবং ডাটা স্টোর করে | চলুন সামনে এগুই ... <br><br>
+                <b> Django ORM:</b>
+                একটা কথা বলা হয় "Python এ সব কিছুই Object" |
+                Object-Relational Mapping কে সংক্ষেপে OMR বলা হয়, যা বিভিন্ন রিলেশনাল ডাটাবেস যেমন SQLite,
+                PostgreSQL, MySQL এর সাথে ইন্টারকানেক্ট করার জন্য Django এর একটা ডিফল্ট মেকানিসম |
+        </p>
+
+        <a href="{%url 'Django/ORM'%}"><button type="button" class="btn btn-outline-info btn-lg btn-block">
+                        Continue Reading.....</button><br></a>
+        <hr>
+</div>
+
+<div class="post">
+        <h2><b>Git And GitHub Part-2</b></h2>
+        <p class="pb-4">
+                এর আগের পর্বে আমরা গিট ভার্সন কন্ট্রল নিয়ে মূটামুটি ধারনা পেয়েছি এই পর্বে গিটহাব নিয়ে হাল্কা পাতলা
+                জানবো |
+                গিটহাব এক ধরনের হোস্টিং সার্ভিস প্রভাইডার যা গিট ভার্সন কন্ট্রোল এর জন্য হোস্ট প্রভাইড করে |
+                শুধু গিটহাবই না আরও আছে যেমন বলা যায় গিটল্যাব, গিটবাকেট |<br><br>
+                ধরুন আপনি একটি কোম্পানিতে কর্মরত আছেন এবং আপনারা কয়েকজন ডেভেলপার একসাথে
+                একই প্রোজেক্ট এর কাজ করছেন , আপনাদের কাজ রেগুলার আপডেট হচ্ছে ,
+                আপনাদের সবাইকে আপডেট থাকতে হচ্ছে এই মুহূর্তে কতটা আপডেট হল ,
+                ঠিক কোন জায়গায় আপডেট হল, এক জনের কোড অন্য জনকে দেখতে হচ্ছে এই
+                ক্ষেত্রে আমার মতে গিটহাব আপনাকে অনেক সাহায্য করতে পারে |
+        </p>
+        <a href="{%url 'Python/built_in_function2'%}"><button type="button" class="btn btn-outline-info btn-lg btn-block">
+                        Continue Reading.....</button><br></a>
+        <hr>
+
+</div>
+
+<div class="post">
+        <h2><b>উবুন্টুতে অভ্র ইন্সটল |</b></h2>
+        <p class="pb-4">
+                প্রথমেই ধন্যবাদ দিতে হয় যাদের অক্লান্ত পরিশ্রমের ফলে অভ্র কিবোর্ড তৈরি হয়েছে |
+                এই পর্বে আমরা জানবো উবুন্টুতে কিভাবে অভ্র ইন্সটল করা যায় (মূলত ubuntu 17 & 18) |
+
+                <br> টার্মিনাল ওপেন করুন এবং নিচের কমান্ডগুলো চালান |
+        </p>
+        <a href="{%url 'Python/list_operation'%}"><button type="button" class="btn btn-outline-info btn-lg btn-block">
+                        Continue Reading.....</button><br></a>
+        <hr>
+</div>
+
+<div class="post">
+        <h2><b>আপনার প্রজেক্ট ফ্রিতে হোস্ট করুন | </b></h2>
+        <p class="pb-4">
+                pythonanywhere.com আপনাকে আপনার পাইথন প্রোজেক্ট ফ্রিতে হোস্ট করতে দেয় |
+                আপনাকে মোট 512.0 MB ডাটা রাখতে দিবে আর আপনি যদি পেইড কাস্টমার হয়ে থাকেন তাহলে তো কোন কথাই নেই |<br> <br>
+                PythonAnywhere এ কোন প্রজেক্ট Deploy করা PC এর লোকালহস্টে প্রোজেক্ট রান করার মতই |
+                আপনি এখানেও ভারচুয়াল ইনভাইরনমেন্ট বানাতে পারবেন,চাইলে কোড এডিট করতে পারবেন , গিটে কমিট করতে পারবেন |
+                সবচেয়ে মজার বেপার হল,Dnajgo প্রজেক্ট লোকালহস্টে রান করার জন্য যেই কমান্ডগুলো দিতেন এখানের কমান্ডগুলোও
+                প্রায় সেইম |
+        </p>
+        <a href="{%url 'Python/string_operation'%}"><button type="button" class="btn btn-outline-info btn-lg btn-block">
+                        Continue Reading.....</button><br></a>
+        <hr>
+</div>
+
+
+
+
+
+
+{% endblock %}

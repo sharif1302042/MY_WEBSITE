@@ -1,0 +1,79 @@
+{% extends 'DjangoHome.html'%}
+{% load staticfiles%}
+
+{% block content%}
+
+<h2><b> Django ORM and QuerySets </b></h2>
+
+<div class="post pb-1 pt-2">
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        এই পর্বে আমরা জানবো কিভাবে SQL Query এক্সিকিউট করা ছাড়াই  ডাটাবেস এর
+        সাথে কানেক্ট করে ডাটা স্টোর করা যায়  এবং এক্সেস করা যায়  | <br><br>
+        <b> Django ORM:</b><br>
+        একটা কথা বলা হয় "Python এ সব কিছুই Object" |
+        Object-Relation Mapper কে সংক্ষেপে OMR বলা হয়, যা বিভিন্ন রিলেশনাল ডাটাবেস যেমন SQLite,
+        PostgreSQL, MySQL এর সাথে ইন্টারকানেক্ট করার জন্য Django এর একটা ডিফল্ট মেকানিসম |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+            class Post(models.Model):
+            <div class="pl-4" style="color:yellow">
+                author = models.ForeignKey('auth.User', on_delete=models.CASCADE) <br>
+                title = models.CharField(max_length=200) <br>
+                text = models.TextField() <br>
+                created_date = models.DateTimeField(default=timezone.now) <br>
+                published_date = models.DateTimeField(blank=True, null=True) <br> <br>
+            </div>
+
+            <div class="pl-4" style="color:yellow">
+                def publish(self): <br>
+                <div class="pl-4" style="color:yellow">
+                    self.published_date = timezone.now() <br>
+                    self.save() <br> <br>
+                </div>
+
+                def __str__(self): <br>
+                <div class="pl-4" style="color:yellow">
+                    return self.title<br>
+                </div>
+            </div>
+
+
+        </p>
+    </div>
+
+</div>
+<div class="post pb-1 pt-3">
+    <h3><b>Database Access through Managers  </b></h3>
+    <p class="pb-2" style="font-size:18px;">
+        Django ডিফল্টভাবে Objects  নামে একটা  Manager প্রত্যেকটা মডেল এ যোগ  করে নেয় , এই 
+        Objects  এর মাধ্যমেই আমরা Model এ Query করতে পারি | <br>
+        Objects হচ্ছে django.db.models.manager.Manager class হচ্ছে এর ইন্সটেন্স মাত্র |
+        এখন আমরা এই Objects manager এর কিছু গুরুত্বপূর্ণ মেথড নিয়ে আলোচনা করবো |
+    </p>
+     
+</div>
+
+<div class="post pb-1 pt-3">
+    <h3><b>The Create() Method </b></h3>
+    <p class="pb-2" style="font-size:18px;">
+        Django ডিফল্টভাবে Objects  নামে একটা  Manager প্রত্যেকটা মডেল এ যোগ  করে নেয় , এই 
+        Objects  এর মাধ্যমেই আমরা Model এ Query করতে পারি | <br>
+        Objects হচ্ছে django.db.models.manager.Manager class হচ্ছে এর ইন্সটেন্স মাত্র |
+        এখন আমরা এই Objects manager এর কিছু গুরুত্বপূর্ণ মেথড নিয়ে আলোচনা করবো |
+    </p>
+    <div class="card p-4" style="background-color:rgba(63, 115, 139, 0.795)">
+        <p style="color:yellow">
+
+            from itertools import product
+            <br> a=[int(x) for x in input().split()]
+            <br> b=[int(x) for x in input().split()] 
+            <br> print(*list(product(a,b)))
+            <br><br>[output]: (1, 3) (1, 4) (2, 3) (2, 4)
+
+        </p>
+    </div>
+    
+</div>
+
+{% endblock %}

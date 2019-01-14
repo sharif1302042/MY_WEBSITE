@@ -20,6 +20,11 @@ from Python import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',views.home,name='home'),
+    path('Programming/', include('Programming.urls')),
+
     path('Python/', include('Python.urls')),
+    path('Others/', include('Others.urls')),
+    path('Django/', include('Django.urls')),
+
 
 ]
