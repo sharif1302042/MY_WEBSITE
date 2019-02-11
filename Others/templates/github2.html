@@ -1,0 +1,105 @@
+{% extends 'OthersHome.html'%}
+{% load staticfiles%}
+
+{% block content%}
+<h1 style="text-align: center;"><b>Git And GitHub Part2</b></h1>
+
+<div class="post pb-1 pt-2">
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        এর আগের পর্বে আমরা গিট ভার্সন কন্ট্রল নিয়ে মূটামুটি ধারনা পেয়েছি এই পর্বে গিটহাব নিয়ে হাল্কা পাতলা জানবো |
+        গিটহাব এক ধরনের হোস্টিং সার্ভিস প্রভাইডার যা গিট ভার্সন কন্ট্রোল এর জন্য হোস্ট প্রভাইড করে |
+        শুধু গিটহাবই না আরও আছে যেমন বলা যায় গিটল্যাব, গিটবাকেট |<br>
+
+        ধরুন আপনি একটি কোম্পানিতে কর্মরত আছেন এবং আপনারা কয়েকজন ডেভেলপার একসাথে একই প্রোজেক্ট এর কাজ করছেন ,
+        আপনাদের কাজ রেগুলার আপডেট হচ্ছে , আপনাদের সবাইকে আপডেট থাকতে হচ্ছে এই মুহূর্তে কতটা আপডেট হল ,
+        ঠিক কোন জায়গায় আপডেট হল, এক জনের কোড অন্য জনকে দেখতে হচ্ছে এই ক্ষেত্রে আমার মতে গিটহাব
+        আপনাকে অনেক সাহায্য করতে পারে |<br>
+
+        এটা একটা ওপেন সোর্স সিস্টেম | আপনি চাইলে অন্যের প্রোজেক্ট এ কন্ট্রিবিউট করতে পারেন |
+        কখনো কখনো দেখা যায় একই প্রোজেক্ট এ হাজার হাজার ডেভেলপার কন্ট্রিবিউট করেছে |
+        গিটহাবের আরও অনেক সুবিধা রয়েছে আমাদের উদ্দেশ্য কিন্তু সুবিধা জানা না অন্য তবুও বলা আর কি |<br>
+        তবে ছোট্ট করে বলে রাখি অনেকের কাছেই শুনা জব ইন্টারভিউ এর একটা কমন প্রশ্ন আপনার
+        গিটহাব কতটা সমৃদ্ব্য?
+
+    </p>
+</div>
+
+<div class="post pb-1 pt-2">
+    <h3><b> একাউন্ট করুনঃ</b></h3>
+    <p class="pb-2" style="font-size:18px;">
+        আপনার যদি গিটহাবে একাউন্ট না থাকে তাহলে
+        <button type="button" class="btn btn-outline-info ">
+            <a href="https://github.com/" style="color: red">এখান </a></button>
+
+        থেকে আকাউন্ট করে নিন আর থাকলে তো কোন কথাই নেই |
+
+
+    </p>
+</div>
+
+
+<div class="post pb-1 pt-2">
+    <h3><b>নতুন রিপোজিটরি তৈরি করুনঃ </b></h3>
+    <p class="pb-2" style="font-size:18px;">
+        আপনার অ্যাকাউন্ট এর ডান পাশে <strong>+</strong> আইকন এ ক্লিক করুন অনেকগুলা অপশন থেকে নিউ
+        রিপোজিটরি তে ক্লিক করুন নিচের মত একটা নতুন উইন্ডো আসবে | </p>
+    <div class="image">
+        <img src="{% static 'images/github1.png'%}" alt="logo">
+    </div>
+
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        রিপোজিটরি একটা লজিকাল নাম দিন তারপর নিচের বাকি যেই অপশন গুলো আছে
+        সেগুলো আপাতত অভাবেই রেখে দিন | তারপর Create repository তে ক্লিক করুন | </p>
+    <div class="image">
+        <img src="{% static 'images/github2.png'%}" alt="logo">
+    </div>
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        আপনার রিপজিটরি তৈরি হয়েছে | </p>
+
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        নিচের দিকে কিছু কমান্ড দেখতে পাচ্ছেন এইগুলা খুব ইম্পরটেন্ট |
+        আপনার গিট থেকে কিভাবে গিটহাবের রিপজিটরির কানেকশন করবেন এই কমান্ড গুলো এই
+        কথাই বলে |
+    </p>
+    <div class="image">
+        <img src="{% static 'images/github3.png'%}" alt="logo">
+    </div>
+    <p class="pb-2 pt-3" style="font-size:18px;">
+
+        দেখতেই পাচ্ছেন 3 টা পার্ট আছে উপরের কাজগুলো আমরা করেছি তাই উপরের টা ইগ্নোর করে নিচের
+        ২ নং থেকে কাজ শুরু করুন এবং ৩নং টাও ইগ্নোর করুন |</p>
+
+</div>
+
+<div class="post pb-1 pt-2">
+    <h3><b> প্রজেক্ট পুস করুনঃ</b></h3>
+    <p class="pb-2" style="font-size:18px;">
+        প্রজেক্ট পুস করার জন্য ২ নং এর কমান্ড দুইটা রান করুন | আমি আমার জন্য যেটা আছে সেটা রান করেছি আপনি
+        আপনার দুইটা রান করুন |
+    </p>
+    <div class="alert alert-primary" role="alert">
+        <p style="color:green">
+            $ git remote add origin https://github.com/sharif1302042/my_test.git
+            <br>$ git push -u origin master
+        </p>
+    </div>
+    <p class="pb-2" style="font-size:18px;">
+        আপানর গিটহাবের  ইউসার নেম ও পাসওয়ার্ড চাবে, দিয়ে ইন্টার চাপুন এবং আপনার গিটহাব রিপজিটরি রিলোড করুন |
+        কিছু দেখতে পেয়েছেন কি ?<br>
+        আপনার প্রোজেক্ট গিটহাবে পুস করা হয়েছে আশা করি | </p>
+</div>
+
+
+
+<hr>
+<div class="clearfix">
+    <button type="button" class="btn bg-dark float-left"><a class="p-4" href="{% url 'Others/github1'%}
+        " style="color:white;">
+            Previous </a></button>
+    <button type="button" class="btn bg-dark float-right">
+        <a class="p-4" href="{% url 'Others/Avro'%}" style="color:white;">Next</a>
+    </button>
+</div>
+
+
+{% endblock %}

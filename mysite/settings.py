@@ -31,10 +31,12 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
+    
     'Django',
     'Others',
     'Python',
     'Programming',
+    'IQS',
 
     'django.contrib.admin',
     'django.contrib.auth',

@@ -1,0 +1,93 @@
+{% extends 'OthersHome.html'%}
+{% load staticfiles%}
+
+{% block content%}
+<h1 style="text-align: center;"><b>উবুন্টুতে অভ্র ইন্সটল </b></h1>
+
+<div class="post pb-1 pt-2">
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        প্রথমেই ধন্যবাদ দিতে হয় যাদের অক্লান্ত পরিশ্রমের ফলে অভ্র কিবোর্ড তৈরি হয়েছে |
+        এই পর্বে আমরা জানবো উবুন্টুতে কিভাবে অভ্র ইন্সটল করা যায় (মূলত ubuntu 17 & 18) |
+
+        <br> টার্মিনাল ওপেন করুন এবং নিচের কমান্ডগুলো চালান |
+    </p>
+    <div class="alert alert-primary" role="alert">
+        <p style="color:green">
+            1) sudo apt-get update && apt-get upgrade
+            <br><br>2) sudo apt-get install gjs gir1.2-ibus-1.0 libibus-1.0-5
+            libibus-1.0-dev ibus-gtk ibus-gtk3 ibus clutter ibus-qt4
+        </p>
+    </div>
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        একটু সময় নিবে ডিপেন্ডেনছি গুলো ইন্সটল করতে | আস্তে আস্তে সামনের দিকে এগুতে থাকুন |
+    </p>
+    <div class="alert alert-primary" role="alert">
+        <p style="color:green">
+            3) wget "https://github.com/maateen/avro/releases/download/v2.1/avro_2.1-3_all.deb"
+            <br><br>4) sudo dpkg -i avro_2.1-3_all.deb
+        </p>
+    </div>
+
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        এটা ডেভ ফাইল ডাউনলোড করে ইন্সটলের উপযোগী বানাবে |
+        <br>এইবার Settings এ যান তারপর Region & Language এ যান নিচের মত একটা উইন্ডো পাবেন
+    </p>
+    <div class="image">
+        <img src="{% static 'images/1.png'%}" alt="logo">
+    </div>
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        তারপর Manage Installed Language এ ক্লিক করুন নিচের মত একটা উইন্ডো পাবেন </p>
+    <div class="image">
+        <img src="{% static 'images/2.png'%}" alt="logo">
+    </div>
+
+    <p class="pb-2 pt-3" style="font-size:18px;">
+        তারপর Install/Remove Languages এ ক্লিক করুন নিচের মত একটা উইন্ডো আসবে </p>
+    <div class="image">
+        <img src="{% static 'images/3.png'%}" alt="logo">
+    </div>
+
+</div>
+
+<p class="pb-2 pt-3" style="font-size:18px;">
+    Banla সিলেক্ট করুন তারপর Apply এ ক্লিক মারুন
+    <br><br>এইবার নিচের কমান্ডগুলো চালান
+    <div class="alert alert-primary" role="alert">
+        5) sudo apt-get install -f
+        <br>6) ibus restart
+
+    </div>
+</p>
+
+<p class="pb-2 pt-3" style="font-size:18px;">
+    পুনরায় সেটিংস এবং নিচের পদ্বতি অনুসরণ করুন
+    Settings > Region and language > Add an input source >clic the (+) icon >
+    Bangla > Bengali (Avro Phonetic) </p>
+
+<div class="image">
+    <img src="{% static 'images/4.png'%}" alt="logo">
+</div>
+<br>
+<div class="image">
+    <img src="{% static 'images/5.png'%}" alt="logo">
+</div>
+<p class="pb-2 pt-3" style="font-size:18px;">
+    আশা করি অভ্র ইন্সটল সম্পন্ন হয়েছে, তারপরও ঠিকভাবে কাজ না করলে PC রিস্টার্ট দিন আশা করি কাজ করবে |
+</p>
+
+
+
+
+
+<hr>
+<div class="clearfix">
+    <button type="button" class="btn bg-dark float-left"><a class="p-4" href="{% url 'Others/github2'%}
+        " style="color:white;">
+            Previous </a></button>
+    <button type="button" class="btn bg-dark float-right">
+        <a class="p-4" href="{% url 'Others/Host_project'%}" style="color:white;">Next</a>
+    </button>
+</div>
+
+
+{% endblock %}
